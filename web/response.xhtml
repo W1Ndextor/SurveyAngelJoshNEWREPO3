@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"> 
+    <ui:composition template="template.xhtml">
+
+        <ui:define name="body">
+            <h:form>
+                <h:panelGrid columns="3">
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <h:outputText value="Question 1: #{questionController.getqDisplay()}" />
+                    <h:selectOneMenu value="#{responseController.rating1}">
+                        <f:selectItems value="#{responseController.ratingValues}" var="a" 
+                                       itemLabel="#{a.ratingDescription}" itemValue="#{a.ratingCode}" />
+                    </h:selectOneMenu>
+                    <h:message for="Response_Text" style="color: red; font-size: 0.7em" />
+
+                    
+                    
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <h:outputText value="Question 2: #{questionController.q1Display}" />
+
+                    <h:selectOneMenu value="#{responseController.rating2}">
+                        <f:selectItems value="#{responseController.ratingValues}" var="a" 
+                                       itemLabel="#{a.ratingDescription}" itemValue="#{a.ratingCode}" />
+                    </h:selectOneMenu>
+
+                    <h:message for="Response_Text1" style="color: red; font-size: 0.7em" />
+
+                    
+                    
+                    <h:outputText value="Question 3: #{questionController.q2Display}" />
+
+                    <h:selectOneMenu value="#{responseController.rating3}">
+                        <f:selectItems value="#{responseController.ratingValues}" var="a" 
+                                       itemLabel="#{a.ratingDescription}" itemValue="#{a.ratingCode}" />
+                    </h:selectOneMenu>
+
+                    <h:message for="Response_Text2" style="color: red; font-size: 0.7em" />
+
+                    
+                    
+                    <h:outputText value="Question 4: #{questionController.q3Display}" />
+
+                    <h:selectOneMenu value="#{responseController.rating4}">
+                        <f:selectItems value="#{responseController.ratingValues}" var="a" 
+                                       itemLabel="#{a.ratingDescription}" itemValue="#{a.ratingCode}" />
+                    </h:selectOneMenu>
+
+                    <h:message for="Response_Text3" style="color: red; font-size: 0.7em" />
+
+                    
+                    
+                    <h:outputText value="Question 5: #{questionController.q4Display}" />
+
+                    <h:selectOneMenu value="#{responseController.rating5}">
+                        <f:selectItems value="#{responseController.ratingValues}" var="a" 
+                                       itemLabel="#{a.ratingDescription}" itemValue="#{a.ratingCode}" />
+                    </h:selectOneMenu>
+                    
+                    <h:message for="Response_Text4" style="color: red; font-size: 0.7em" />
+
+                    
+                    
+                    <h:outputText value="Question 6: #{questionController.q5Display}" />
+
+                    <h:selectOneMenu value="#{responseController.rating6}">
+                        <f:selectItems value="#{responseController.ratingValues}" var="a" 
+                                       itemLabel="#{a.ratingDescription}" itemValue="#{a.ratingCode}" />
+                    </h:selectOneMenu>
+                    
+                    <h:message for="Response_Text5" style="color: red; font-size: 0.7em" />
+
+                    
+                    
+                    <h:outputText value="Question 7: #{questionController.q6Display}" />
+
+                    <h:selectOneMenu value="#{responseController.rating7}">
+                        <f:selectItems value="#{responseController.ratingValues}" var="a" 
+                                       itemLabel="#{a.ratingDescription}" itemValue="#{a.ratingCode}" />
+                    </h:selectOneMenu>
+                    
+                    <h:message for="Response_Text6" style="color: red; font-size: 0.7em" />
+
+                    
+                    
+                    <h:outputText value="Question 8: #{questionController.q7Display}" />
+
+                    <h:selectOneMenu value="#{responseController.rating8}">
+                        <f:selectItems value="#{responseController.ratingValues}" var="a" 
+                                       itemLabel="#{a.ratingDescription}" itemValue="#{a.ratingCode}" />
+                    </h:selectOneMenu>
+                    
+                    <h:message for="Response_Text7" style="color: red; font-size: 0.7em" />
+
+                    
+                    
+                    <h:outputText value="Question 9: #{questionController.q8Display}" />
+
+                    <h:selectOneMenu value="#{responseController.rating9}">
+                        <f:selectItems value="#{responseController.ratingValues}" var="a" 
+                                       itemLabel="#{a.ratingDescription}" itemValue="#{a.ratingCode}" />
+                    </h:selectOneMenu>
+                    
+                    <h:message for="Response_Text8" style="color: red; font-size: 0.7em" />
+
+                    
+                    
+                    <h:outputText value="Question 10: #{questionController.q9Display}" />
+                    
+                    <h:selectOneMenu value="#{responseController.rating10}">
+                        <f:selectItems value="#{responseController.ratingValues}" var="a" 
+                                       itemLabel="#{a.ratingDescription}" itemValue="#{a.ratingCode}" />
+                    </h:selectOneMenu>
+
+                    <h:message for="Response_Text9" style="color: red; font-size: 0.7em" />
+
+
+
+                </h:panelGrid>
+
+                <h:commandButton id="Submit" value="Submit" onclick="#{responseController.setSubmitPush(1)}" action="response" />
+                <h:commandButton id="Next" value="Next" action="index.xhtml" onclick="#{responseController.clear()}"/>
+                <h:commandButton value="Clear" type="reset" />
+               
+            </h:form>
+
+            <h:outputText escape="false" value="#{responseController.responseMessage}" />
+        </ui:define>
+
+    </ui:composition>
+</html>

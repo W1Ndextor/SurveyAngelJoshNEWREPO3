@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<ui:composition template="template.xhtml">
+    <ui:define name="body">
+        <h:form>
+            
+            <h:outputText value="enter email" />
+            <h:inputText id="valid_email" autocomplete="off" value="#{responseController.respondentEmail}" 
+                                 size="50" maxlength="100" required="#{questionController.valFlag}" label="valid_email"/>
+                    <h:message for="valid_email" style="color: red; font-size: 0.7em" />
+                    
+                    
+                     <h:commandButton id="Submit" value="Submit" onclick="reset" action="login" />
+                     <h:commandButton id="Next" value="Next" action="response"/>
+                        <h:commandButton value="Clear" type="reset" />
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>
